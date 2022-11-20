@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SurpriseMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LDe-XV-h1b">
+                                <rect key="frame" x="0.0" y="146.66666666666669" width="390" height="663.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите собеседника поблизости:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-bK-biz">
+                                <rect key="frame" x="16" y="63.000000000000007" width="358" height="67.666666666666686"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LDe-XV-h1b" firstAttribute="top" secondItem="3Q8-bK-biz" secondAttribute="bottom" constant="16" id="BRb-fz-iYE"/>
+                            <constraint firstItem="3Q8-bK-biz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LNZ-0A-CUv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LDe-XV-h1b" secondAttribute="trailing" id="TeI-L7-kIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LDe-XV-h1b" secondAttribute="bottom" id="Tvg-F9-SXU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Q8-bK-biz" secondAttribute="trailing" constant="16" id="VQO-St-qGa"/>
+                            <constraint firstItem="LDe-XV-h1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vdl-x7-SuH"/>
+                            <constraint firstItem="3Q8-bK-biz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rU7-qg-TvJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="LDe-XV-h1b" id="qW6-RE-9GB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21.538461538461537" y="3.5545023696682461"/>
+        </scene>
+        <!--Recorder View Controller-->
+        <scene sceneID="WV3-Lc-Lx3">
+            <objects>
+                <viewController storyboardIdentifier="recordVC" id="5v6-Ov-MB4" customClass="RecorderViewController" customModule="SurpriseMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="akj-P7-Bc5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zPM-KT-Yce">
+                                <rect key="frame" x="0.0" y="47" width="390" height="683"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-4z-ZCs">
+                                <rect key="frame" x="16" y="754" width="358" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qHw-DW-xGX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Готово, отправить реакцию"/>
+                                <connections>
+                                    <action selector="tapFinish" destination="5v6-Ov-MB4" eventType="touchUpInside" id="QBL-gS-UT2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vEQ-Il-gMv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vEQ-Il-gMv" firstAttribute="trailing" secondItem="gPd-4z-ZCs" secondAttribute="trailing" constant="16" id="FTA-mS-zSs"/>
+                            <constraint firstItem="gPd-4z-ZCs" firstAttribute="top" secondItem="zPM-KT-Yce" secondAttribute="bottom" constant="24" id="HtP-sK-q1w"/>
+                            <constraint firstItem="gPd-4z-ZCs" firstAttribute="leading" secondItem="vEQ-Il-gMv" secondAttribute="leading" constant="16" id="QVK-be-mwL"/>
+                            <constraint firstItem="vEQ-Il-gMv" firstAttribute="trailing" secondItem="zPM-KT-Yce" secondAttribute="trailing" id="SGT-a3-zIk"/>
+                            <constraint firstItem="zPM-KT-Yce" firstAttribute="top" secondItem="vEQ-Il-gMv" secondAttribute="top" id="iQH-zG-YhI"/>
+                            <constraint firstItem="zPM-KT-Yce" firstAttribute="leading" secondItem="vEQ-Il-gMv" secondAttribute="leading" id="mMo-5X-p5y"/>
+                            <constraint firstItem="vEQ-Il-gMv" firstAttribute="bottom" secondItem="gPd-4z-ZCs" secondAttribute="bottom" constant="16" id="yMY-Mt-UA4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d0s-ca-w7S"/>
+                    <connections>
+                        <outlet property="imageView" destination="zPM-KT-Yce" id="0fX-oO-7Vp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gk-wd-Wv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="6"/>
+        </scene>
+        <!--Send View Controller-->
+        <scene sceneID="TnZ-VQ-hU0">
+            <objects>
+                <viewController storyboardIdentifier="sendVC" id="IqV-UP-1bw" customClass="SendViewController" customModule="SurpriseMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rTe-QY-UXc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP0-2p-pXy">
+                                <rect key="frame" x="84" y="404.66666666666669" width="222" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Отправить изображение"/>
+                                <connections>
+                                    <action selector="sendButtonTap" destination="IqV-UP-1bw" eventType="touchUpInside" id="bww-IX-8Qt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус: ожидание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dn-AH-mTp">
+                                <rect key="frame" x="16" y="455.66666666666669" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDG-xr-14Q">
+                                <rect key="frame" x="16" y="63" width="74" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="back" destination="IqV-UP-1bw" eventType="touchUpInside" id="J6V-uG-QVY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ljg-Ra-B2x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BP0-2p-pXy" firstAttribute="centerY" secondItem="rTe-QY-UXc" secondAttribute="centerY" id="FSQ-Xe-irw"/>
+                            <constraint firstItem="ljg-Ra-B2x" firstAttribute="trailing" secondItem="4dn-AH-mTp" secondAttribute="trailing" constant="16" id="Ja5-qb-PZU"/>
+                            <constraint firstItem="oDG-xr-14Q" firstAttribute="top" secondItem="ljg-Ra-B2x" secondAttribute="top" constant="16" id="KFF-Uw-Yik"/>
+                            <constraint firstItem="4dn-AH-mTp" firstAttribute="leading" secondItem="ljg-Ra-B2x" secondAttribute="leading" constant="16" id="a7r-QS-Y1D"/>
+                            <constraint firstItem="BP0-2p-pXy" firstAttribute="centerX" secondItem="rTe-QY-UXc" secondAttribute="centerX" id="a8m-oS-r9V"/>
+                            <constraint firstItem="oDG-xr-14Q" firstAttribute="leading" secondItem="ljg-Ra-B2x" secondAttribute="leading" constant="16" id="sUZ-kZ-OdP"/>
+                            <constraint firstItem="4dn-AH-mTp" firstAttribute="top" secondItem="BP0-2p-pXy" secondAttribute="bottom" constant="16" id="z6E-5A-bT1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="4dn-AH-mTp" id="F1C-gq-PrE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6g-Qy-l0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

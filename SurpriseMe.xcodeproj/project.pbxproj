@@ -13,6 +13,9 @@
 		726BF227292A9EAF000E2DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726BF225292A9EAF000E2DAB /* Main.storyboard */; };
 		726BF229292A9EB0000E2DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726BF228292A9EB0000E2DAB /* Assets.xcassets */; };
 		726BF22C292A9EB0000E2DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726BF22A292A9EB0000E2DAB /* LaunchScreen.storyboard */; };
+		726BF234292A9F77000E2DAB /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF233292A9F77000E2DAB /* RecorderViewController.swift */; };
+		726BF236292AA457000E2DAB /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF235292AA457000E2DAB /* MCService.swift */; };
+		726BF238292AAA4F000E2DAB /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF237292AAA4F000E2DAB /* SendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		726BF228292A9EB0000E2DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		726BF22B292A9EB0000E2DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		726BF22D292A9EB0000E2DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		726BF233292A9F77000E2DAB /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		726BF235292AA457000E2DAB /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
+		726BF237292AAA4F000E2DAB /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				726BF228292A9EB0000E2DAB /* Assets.xcassets */,
 				726BF22A292A9EB0000E2DAB /* LaunchScreen.storyboard */,
 				726BF22D292A9EB0000E2DAB /* Info.plist */,
+				726BF233292A9F77000E2DAB /* RecorderViewController.swift */,
+				726BF235292AA457000E2DAB /* MCService.swift */,
+				726BF237292AAA4F000E2DAB /* SendViewController.swift */,
 			);
 			path = SurpriseMe;
 			sourceTree = "<group>";
@@ -138,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726BF236292AA457000E2DAB /* MCService.swift in Sources */,
+				726BF234292A9F77000E2DAB /* RecorderViewController.swift in Sources */,
+				726BF238292AAA4F000E2DAB /* SendViewController.swift in Sources */,
 				726BF224292A9EAF000E2DAB /* ViewController.swift in Sources */,
 				726BF220292A9EAF000E2DAB /* AppDelegate.swift in Sources */,
 				726BF222292A9EAF000E2DAB /* SceneDelegate.swift in Sources */,
@@ -290,11 +302,13 @@
 				DEVELOPMENT_TEAM = LHL6WHL3CM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SurpriseMe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SurpriseMe!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +332,13 @@
 				DEVELOPMENT_TEAM = LHL6WHL3CM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SurpriseMe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SurpriseMe!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
